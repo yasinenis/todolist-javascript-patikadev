@@ -84,6 +84,11 @@ function addItem(taskName) {
     updateLiIndexes()
     saveAppState()
     localStorage.setItem("taskCount", taskCount);
+
+    // sound
+    const sound = document.getElementById("addTask");
+    sound.currentTime = 0;
+    sound.play();
 }
 
 function loadPreviousPage() {
@@ -138,15 +143,30 @@ function touchHandler(event) {
             saveAppState();
             console.log(`Kalan Task: ${taskCount}`)
             localStorage.setItem("taskCount", taskCount)    // eski taskCount
+
+            // sound
+            const sound = document.getElementById("deleteTask");
+            sound.currentTime = 0;
+            sound.play();
+
+
             return
         }
 
         // mark as DONE
         const isCompleted = liElement.classList.toggle("completed")
+
         // local Storage
         appState.statusList[index] = isCompleted;
         updateLiIndexes();
         saveAppState();
+
+        // sound
+        if (isCompleted) {
+            const sound = document.getElementById("doneSound");
+            sound.currentTime = 0;
+            sound.play();
+        }
         // tick symbol
         const iconElement = liElement.querySelector("i");
         iconElement.classList.toggle("fa-circle-check")
