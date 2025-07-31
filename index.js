@@ -1,4 +1,4 @@
-taskCount= document.querySelectorAll("li").length;
+let taskCount= localStorage.getItem("taskCount") ? localStorage.getItem("taskCount") : 0;
 console.log(`Başlangıctaki gorev sayisi : ${taskCount}`)
 
 // adding task
@@ -12,9 +12,7 @@ function formHandler(event) {
     const TASK_NAME = document.querySelector("#taskInput");
 
     if (TASK_NAME.value) { // veri var ise
-        TASK_ID = taskCount
-        TASK_ID = TASK_ID + 1;
-        addItem(TASK_NAME.value, TASK_ID);
+        addItem(TASK_NAME.value);
         TASK_NAME.value = ""; // veri gonderdikten sonra sıfırladık
     }
     else {
@@ -24,7 +22,7 @@ function formHandler(event) {
 
 let userListDOM = document.querySelector("#userList")
 
-function addItem(taskName, task_id) {
+function addItem(taskName) {
     let liDOM = document.createElement("li");
     liDOM.innerHTML = 
     `
@@ -41,6 +39,7 @@ function addItem(taskName, task_id) {
     liDOM.classList.add("d-flex")
     userListDOM.append(liDOM);
     taskCount++;
+    localStorage.setItem("taskCount", taskCount);
 }
 
 // deleting task
@@ -51,6 +50,7 @@ function touchHandler(event) {
         event.target.closest("li").remove();
         taskCount--;
         console.log(`Kalan Task: ${taskCount}`)
+        localStorage.setItem("taskCount", taskCount)
     }
     // mark as DONE
     if(event.target.closest("li")) {
@@ -62,9 +62,6 @@ function touchHandler(event) {
         iconElement.classList.toggle("fa-circle")
         iconElement.classList.toggle("fa-solid")
         iconElement.classList.toggle("fa-regular")
-
-
-        
         
     }
 
