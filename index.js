@@ -48,7 +48,15 @@ function formHandler(event) {
         TASK_NAME.value = ""; // veri gonderdikten sonra sıfırladık
     }
     else {
-        alert("Bir hata yapıyorsun! Lütfen boş bırakmayınız.");
+        // toast
+        const toastEl = document.getElementById('myToast');
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+
+        // sound error
+        const sound = document.getElementById("infoSound");
+        sound.currentTime = 0;
+        sound.play();
     }
 }
 
