@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container upBlock d-flex align-items-center justify-content-center flex-column">
+        <div class="header d-flex align-items-center justify-content-center flex-column">
+            <img style="background-color: white;"
+                src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+                class="mb-1" alt="">
+            <h2 style="color: white;">Yapılacaklar Listesi</h2>
+        </div>
+        <div class="d-flex">
+            <input type="text" id="taskInput" class="ps-2" placeholder="Bugün ne yapacaksın?">
+            <button id="buttonId" class="buttonum" type="submit">Ekle</button>
+        </div>
+    </div>
+
+    <!-- liste -->
+    <div class="container boBlock ps-0 pe-0">
+        <ul id="userList">
+            <!--
+            <li class="d-flex">
+                <div1>
+                    <i></i>
+                </div1>
+                <div2>
+                    <span>Görev 1</span>
+                </div2>
+                <div3>
+                    <i class="del-btn fa-solid fa-circle-xmark"></i>
+                </div3>
+            </li>
+            <li class="d-flex">
+                <div1>
+                    <i></i>
+                </div1>
+                <div2>
+                    <span>Görev 2</span>
+                </div2>
+                <div3>
+                    <i class="del-btn fa-regular fa-circle"></i>
+                </div3>
+            </li>
+            <li class="d-flex">
+                <div1>
+                    <i></i>
+                </div1>
+                <div2>
+                    <span>Görev 3</span>
+                </div2>
+                <div3>
+                    <i class="del-btn fa-solid fa-circle-xmark"></i>
+                </div3>
+            </li>
+            -->
+        </ul>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

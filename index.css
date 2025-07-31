@@ -1,0 +1,99 @@
+
+.upBlock {
+    background-color: rgb(247, 133, 1);
+    max-width: 1110px;
+    min-height: 216px;
+}
+
+.boBlock {
+    max-width: 1110px;
+}
+
+.buttonum {
+    width: 257px; 
+    height: 44px; 
+    border: 0px; 
+    background-color: rgb(217, 217, 217);
+    color: #555555;
+    transition: 0.3s;
+}
+
+.buttonum:hover {
+    background-color: #bbb;
+}
+
+#taskInput {
+    width: 773px;
+    height: 44px; 
+    border: 0px;
+}
+
+.completed {
+    background-color: #276678 !important;
+    color: white;
+    transition: 0.3s;
+}
+
+.completed:hover {
+    background-color: #276678;
+}
+
+ul li {
+    min-height: 51px;
+    line-height: 51px;
+    font-size: 18px;
+    background-color: #f9f9f9;
+    transition: 0.3s;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-bottom: 0px;
+}
+
+li div1 {
+    min-width: 30px;
+}
+
+li div2 {
+    min-width: 1020px;
+}
+
+li div3 i {
+    cursor: pointer;
+}
+
+ul li:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li:hover {
+    background-color: #bbb;
+}
+
+li button {
+    background: none;
+    border: none;
+    transition: 0.3s;
+    right: 0px;
+    font-size: 20px;
+    min-width: 40px;
+}
+
+li button:hover {
+    background-color: darkred;
+    color: white;
+    cursor: pointer;
+}
+
+.del-btn {
+    margin-left: auto;
+    text-decoration: none !important;
+}
+
+.underlying {
+    text-decoration: line-through;
+}
