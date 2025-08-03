@@ -130,6 +130,11 @@ li button:hover {
         width: 87%;
     }
 
+    .col-12 {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
 }
 
 /* Telefonlar */
