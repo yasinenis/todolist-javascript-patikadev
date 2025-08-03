@@ -121,6 +121,14 @@ li button:hover {
         width: 91%;
     }
 
+    #taskInput {
+        width: 70%;
+    }
+
+    .buttonum {
+        width: 20%;
+    }
+
 }
 
 /* Tablet */
@@ -135,6 +143,14 @@ li button:hover {
         padding-right: 0%;
     }
 
+    #taskInput {
+        width: 60%;
+    }
+
+    .buttonum {
+        width: 20%;
+    }
+
 }
 
 /* Telefonlar */
@@ -142,6 +158,14 @@ li button:hover {
    
     ul li div:nth-child(2) {
         width: 80%;
+    }
+
+    #taskInput {
+        width: 55%;
+    }
+
+    .buttonum {
+        width: 20%;
     }
 }
 
