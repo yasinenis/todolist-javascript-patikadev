@@ -18,25 +18,36 @@
 </head>
 
 <body>
-    <div class="container upBlock d-flex align-items-center justify-content-center flex-column">
-        <div class="header d-flex align-items-center justify-content-center flex-column">
-            <img style="background-color: white;"
-                src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
-                class="mb-1" alt="">
-            <h2 style="color: white;">Yapılacaklar Listesi</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <div class="upBlock d-flex align-items-center justify-content-center flex-column">
+                    <div class="header d-flex align-items-center justify-content-center flex-column">
+                        <img style="background-color: white;"
+                            src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+                            class="mb-1" alt="">
+                        <h2 style="color: white;">Yapılacaklar Listesi</h2>
+                    </div>
+                    <div class=" inputGroup d-flex flex-nowrap w-100 justify-content-center">
+                        <input type="text" id="taskInput" class="ps-2" placeholder="Bugün ne yapacaksın?">
+                        <button id="buttonId" class="buttonum" type="submit">Ekle</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="d-flex">
-            <input type="text" id="taskInput" class="ps-2" placeholder="Bugün ne yapacaksın?">
-            <button id="buttonId" class="buttonum" type="submit">Ekle</button>
+        <!-- liste -->
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <div class="boBlock ps-0 pe-0">
+                    <ul id="userList">
+
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- liste -->
-    <div class="container boBlock ps-0 pe-0">
-        <ul id="userList">
 
-        </ul>
-    </div>
 
     <!-- sounds -->
     <audio id="doneSound" src="sound/done4.wav" preload="auto"></audio>
@@ -46,7 +57,7 @@
     <audio id="infoSound" src="sound/info.wav" preload="auto"></audio>
 
     <!-- toast error-->
-    <div class="toast-container position-fixed top-0 end-0 p-3">
+    <div z-index="2" class="toast-container position-fixed top-0 end-0 p-3">
         <div id="myToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <strong class="me-auto">⚠️ Uyarı</strong>

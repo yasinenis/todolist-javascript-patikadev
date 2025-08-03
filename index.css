@@ -2,14 +2,15 @@ body {
     background-color: antiquewhite;
 }
 
+
 .upBlock {
     background-color: rgb(247, 133, 1);
-    max-width: 1110px;
-    min-height: 216px;
+    width: 100%;
+    height: 216px;
 }
 
 .boBlock {
-    max-width: 1110px;
+    width: 100%;
 }
 
 .buttonum {
@@ -42,7 +43,7 @@ body {
 }
 
 ul li {
-    min-height: 51px;
+    height: 51px;
     line-height: 51px;
     font-size: 18px;
     background-color: #f9f9f9;
@@ -50,18 +51,21 @@ ul li {
     list-style-type: none;
     padding-left: 20px;
     padding-bottom: 0px;
+    width: 100%;
 }
 
-li div1 {
-    min-width: 30px;
+ul li div:nth-child(1) {
+    width: 30px;
 }
 
-li div2 {
-    min-width: 1020px;
+ul li div:nth-child(2) {
+    width: 90%;
+    padding-left: 5px;
 }
 
-li div3 i {
+ul li div:nth-child(3) {
     cursor: pointer;
+    margin-left: 10px;
 }
 
 ul li:nth-child(odd) {
@@ -84,7 +88,7 @@ li button {
     transition: 0.3s;
     right: 0px;
     font-size: 20px;
-    min-width: 40px;
+    width: 40px;
 }
 
 li button:hover {
@@ -95,9 +99,50 @@ li button:hover {
 
 .del-btn {
     margin-left: auto;
-    text-decoration: none !important;
+    text-decoration: none /*!important;*/
 }
 
 .underlying {
     text-decoration: line-through;
+}
+
+/* Big Desktop */
+@media (max-width: 1440px) {
+
+    ul li div:nth-child(2) {
+        width: 93%;
+    }
+}
+
+/*Desktop*/
+@media (max-width: 1024px) {
+
+    ul li div:nth-child(2) {
+        width: 91%;
+    }
+
+}
+
+/* Tablet */
+@media (max-width: 769px) {
+
+    ul li div:nth-child(2) {
+        width: 87%;
+    }
+
+}
+
+/* Telefonlar */
+@media (max-width: 425px) {
+   
+    ul li div:nth-child(2) {
+        width: 80%;
+    }
+}
+
+@media (max-width: 325px) {
+
+    ul li div:nth-child(2) {
+        width: 75%;
+    }
 }

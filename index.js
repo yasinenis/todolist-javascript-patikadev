@@ -73,15 +73,15 @@ function addItem(taskName) {
     liDOM.setAttribute("data-index", taskCount)
     liDOM.innerHTML =
         `
-        <div1>
+        <div>
             <i class="fa-regular fa-circle"></i>
-        </div1>
-        <div2>
+        </div>
+        <div>
             <span>${taskName}</span>
-        </div2>
-        <div3>
+        </div>
+        <div>
             <i class="del-btn fa-solid fa-square-xmark"></i>
-        </div3>
+        </div>
     `
     liDOM.classList.add("d-flex")
     userListDOM.append(liDOM);
@@ -105,15 +105,15 @@ function loadPreviousPage() {
         liDOM.setAttribute("data-index", i)
         liDOM.innerHTML =
             `
-            <div1>
+            <div>
                 <i class="${appState.statusList[i] ? "fa-solid" : "fa-regular"} fa-circle${appState.statusList[i] ? "-check fa-solid" : ""}"></i>
-            </div1>
-            <div2>
+            </div>
+            <div>
                 <span>${appState.taskList[i]}</span>
-            </div2>
-            <div3>
+            </div>
+            <div>
                 <i class="del-btn fa-solid fa-square-xmark"></i>
-            </div3>
+            </div>
         `
         if (appState.statusList[i] == true) {
             liDOM.classList.add("completed")
